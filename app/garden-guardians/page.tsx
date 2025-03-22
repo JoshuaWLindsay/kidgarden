@@ -19,6 +19,14 @@ export default function GardenGuardians() {
             <span>⚔️</span> Garden Guardians: Nature's Pest Control{' '}
             <span>⚔️</span>
           </h1>
+          <Image
+            className="rounded-lg shadow-md"
+            src="/garden-guardians.webp"
+            alt="Garden Guardians"
+            width={600}
+            height={400}
+            priority
+          />
           <p className="mt-4 text-lg text-center text-amber-700 dark:text-amber-300">
             Welcome to our Garden Guardians page! Here you will discover the
             fascinating creatures that help protect your garden by eating the
@@ -33,13 +41,13 @@ export default function GardenGuardians() {
           <h2 className="text-2xl font-semibold mb-4 text-amber-800 dark:text-amber-200 flex items-center gap-2">
             <span>🦎</span> 1. Lizards: The Silent Hunters
           </h2>
+
           <Image
-            className="rounded-lg shadow-md"
             src="/lizard-guardian.webp"
-            alt="Guinea Pigs"
+            alt="Lizard guardian hunting insects"
             width={600}
             height={400}
-            priority
+            className="rounded-lg shadow-md mb-6 mx-auto"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
@@ -82,6 +90,14 @@ export default function GardenGuardians() {
             <span>🐸</span> 2. Frogs and Toads: Nighttime Defenders
           </h2>
 
+          <Image
+            src="/frog-guardian.webp"
+            alt="Frog guardian catching insects"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md mb-6 mx-auto"
+          />
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <div className="bg-amber-50 dark:bg-amber-900/40 p-4 rounded-lg">
               <h3 className="font-medium mb-2 text-amber-700 dark:text-amber-300">
@@ -121,6 +137,14 @@ export default function GardenGuardians() {
             <span>🐦</span> 3. Birds: Feathered Protectors
           </h2>
 
+          <Image
+            src="/bird-guardian.webp"
+            alt="Bird guardian eating pests"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md mb-6 mx-auto"
+          />
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <div className="bg-amber-50 dark:bg-amber-900/40 p-4 rounded-lg">
               <h3 className="font-medium mb-2 text-amber-700 dark:text-amber-300">
@@ -155,11 +179,19 @@ export default function GardenGuardians() {
           </p>
         </section>
 
-        {/* Remaining sections */}
+        {/* Praying Mantises Section */}
         <section className="w-full bg-white/80 dark:bg-amber-800/60 rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4 text-amber-800 dark:text-amber-200 flex items-center gap-2">
             <span>🙏</span> 4. Praying Mantises: The Patient Predators
           </h2>
+
+          <Image
+            src="/mantis-guardian.webp"
+            alt="Praying mantis hunting"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md mb-6 mx-auto"
+          />
 
           <div className="mb-4">
             <div className="bg-amber-50 dark:bg-amber-900/40 p-4 rounded-lg">
@@ -184,10 +216,19 @@ export default function GardenGuardians() {
           </p>
         </section>
 
+        {/* Spiders Section */}
         <section className="w-full bg-white/80 dark:bg-amber-800/60 rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4 text-amber-800 dark:text-amber-200 flex items-center gap-2">
             <span>🕸️</span> 5. Spiders: Web Weavers of Protection
           </h2>
+
+          <Image
+            src="/spider-guardian.webp"
+            alt="Spider with its web"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md mb-6 mx-auto"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <div className="bg-amber-50 dark:bg-amber-900/40 p-4 rounded-lg">
@@ -222,10 +263,19 @@ export default function GardenGuardians() {
           </p>
         </section>
 
+        {/* Ladybugs Section */}
         <section className="w-full bg-white/80 dark:bg-amber-800/60 rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4 text-amber-800 dark:text-amber-200 flex items-center gap-2">
             <span>🐞</span> 6. Ladybugs: Tiny Heroes
           </h2>
+
+          <Image
+            src="/ladybug-guardian.webp"
+            alt="Ladybug eating aphids"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md mb-6 mx-auto"
+          />
 
           <div className="mb-4">
             <div className="bg-amber-50 dark:bg-amber-900/40 p-4 rounded-lg">
