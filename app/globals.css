@@ -5,12 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --link: #2563eb; /* Blue 600 */
+  --link-hover: #1d4ed8; /* Blue 700 */
+  --link-visited: #7e22ce; /* Purple 700 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #064800;
     --foreground: #ededed;
+    --link: #93c5fd; /* Blue 300 */
+    --link-hover: #bfdbfe; /* Blue 200 */
+    --link-visited: #d8b4fe; /* Purple 300 */
   }
 }
 
@@ -18,4 +24,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom link styling */
+@layer base {
+  a {
+    color: var(--link);
+    text-decoration-line: none;
+    transition: color 0.15s ease;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    text-decoration-line: underline;
+  }
+
+  a:visited {
+    color: var(--link-visited);
+  }
 }

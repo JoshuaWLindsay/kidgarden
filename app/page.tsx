@@ -46,12 +46,18 @@ export default function Home() {
           </ul>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-green-700 dark:text-green-300">
+      <footer className="row-start-3 flex flex-col gap-4 items-center justify-center">
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/guinea-pig-garden"
         >
           🐹 Guinea Pig Garden 🐹
+        </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/garden-guardians"
+        >
+          ⚔️ Garden Guardians! ⚔️
         </Link>
       </footer>
     </div>
