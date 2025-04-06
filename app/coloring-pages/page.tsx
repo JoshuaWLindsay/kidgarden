@@ -99,7 +99,7 @@ export default function GardenGuardians() {
         </p>
 
         {/* Carousel Component */}
-        <Carousel items={guardianItems} autoSlide={true} />
+        <Carousel items={guardianItems} />
 
         <div className="bg-white/90 dark:bg-amber-900/60 p-5 rounded-lg border-t-2 border-amber-300 dark:border-amber-700 w-full">
           <p className="text-center text-amber-700 dark:text-amber-300 text-lg">
