@@ -157,7 +157,7 @@ export default function GardenTicTacToePage() {
     useTicTacToe();
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative bg-gradient-to-b from-green-50 to-green-100 dark:from-green-900 dark:to-green-800">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-4 sm:p-20 gap-8 sm:gap-16 relative bg-gradient-to-b from-green-50 to-green-100 dark:from-green-900 dark:to-green-800">
       {/* Home icon link in top right corner (consistent with other pages) */}
       <Link
         href="/"
@@ -167,13 +167,13 @@ export default function GardenTicTacToePage() {
         🏠
       </Link>
 
-      <main className="flex flex-col gap-[16px] row-start-2 items-center w-full max-w-xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-green-700 dark:text-green-200">
+      <main className="flex flex-col gap-3 sm:gap-4 row-start-2 items-center justify-center w-full max-w-xl min-h-[calc(100svh-6rem)]">
+        <h1 className="text-2xl md:text-4xl font-bold text-green-700 dark:text-green-200">
           Garden Tic‑Tac‑Toe
         </h1>
 
-        <section className="bg-white/80 dark:bg-green-800/80 rounded-lg p-4 md:p-6 shadow">
-          <p className="text-center text-lg md:text-xl font-medium text-green-800 dark:text-green-100 mb-4">
+        <section className="bg-white/80 dark:bg-green-800/80 rounded-lg p-3 md:p-6 shadow">
+          <p className="text-center text-base md:text-xl font-medium text-green-800 dark:text-green-100 mb-2 md:mb-4">
             {statusText()}
           </p>
 
@@ -184,7 +184,7 @@ export default function GardenTicTacToePage() {
             onClick={handleClick}
           />
 
-          <div className="mt-4 flex items-center justify-center gap-3">
+          <div className="mt-3 md:mt-4 flex items-center justify-center gap-3">
             <button
               onClick={reset}
               className="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700 active:bg-green-800 transition-colors"
@@ -194,7 +194,7 @@ export default function GardenTicTacToePage() {
           </div>
         </section>
 
-        <footer className="mt-2 text-center text-green-700 dark:text-green-200">
+        <footer className="mt-1 text-center text-sm md:text-base text-green-700 dark:text-green-200">
           Tomatoes {TOMATO} vs Lettuce {LETTUCE}
         </footer>
       </main>

@@ -196,11 +196,11 @@ export default function FrogInvaders() {
       });
     }
 
-    // Draw invaders – using an alien emoji for a playful look
+    // Draw invaders – using a fly emoji for a playful look
     ctx.font = "40px sans-serif";
     invaders.current.forEach((invader) => {
       if (!invader.captured) {
-        ctx.fillText("👾", invader.x, invader.y + invader.height - 5);
+        ctx.fillText("🪰", invader.x, invader.y + invader.height - 5);
       }
     });
 
