@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* eslint-disable max-lines-per-function */
 import Link from 'next/link';
 
 export default function Home() {
@@ -32,26 +32,38 @@ export default function Home() {
         >
           🏡 Coloring Pages! 🦋
         </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/garden-game"
+        >
+          👾 Garden Game! 👾
+        </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/tic-tac-toe"
+        >
+          🍅🥬 Garden Tic‑Tac‑Toe 🥬🍅
+        </Link>
         <div className="text-center">
           <p className="mt-4 text-lg text-green-700 dark:text-green-200">
             A special place where young ideas grow and bloom
           </p>
         </div>
 
-        <div className="bg-white/80 dark:bg-green-800/80 p-6 rounded-lg max-w-2xl w-full text-center md:text-left">
+        <div className="bg-white/80 dark:bg-green-800/80 p-6 rounded-lg max-w-2xl w-full text-center">
           <h2 className="text-2xl font-semibold text-green-700 dark:text-green-200 mb-4">
             What's Growing Here?
           </h2>
           <ul className="list-none space-y-4 text-green-800 dark:text-green-100">
-            <li className="flex items-center gap-2 justify-center md:justify-start">
+            <li className="flex items-center gap-2 justify-center">
               <span className="text-xl">🌱</span> Creative stories from young
               minds
             </li>
-            <li className="flex items-center gap-2 justify-center md:justify-start">
+            <li className="flex items-center gap-2 justify-center">
               <span className="text-xl">🌻</span> Artwork and imagination
               projects
             </li>
-            <li className="flex items-center gap-2 justify-center md:justify-start">
+            <li className="flex items-center gap-2 justify-center">
               <span className="text-xl">🍃</span> Ideas that deserve to be
               shared
             </li>
