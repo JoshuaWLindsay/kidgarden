@@ -36,13 +36,13 @@ export default function Home() {
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/garden-game"
         >
-          👾 Garden Game! 👾
+          🐸 Garden Game! 🪰
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/tic-tac-toe"
         >
-          🍅🥬 Garden Tic‑Tac‑Toe 🥬🍅
+          🍅 Garden Tic‑Tac‑Toe 🥬
         </Link>
         <div className="text-center">
           <p className="mt-4 text-lg text-green-700 dark:text-green-200">
