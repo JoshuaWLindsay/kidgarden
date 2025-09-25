@@ -34,9 +34,21 @@ export default function Home() {
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/coloring-game"
+        >
+          🎨 Simple Coloring Game 🌸
+        </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/garden-game"
         >
           🐸 Garden Game! 🪰
+        </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/memory-match"
+        >
+          🐹 Garden Memory Match 🥬
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
