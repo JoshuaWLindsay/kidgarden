@@ -1,114 +1,111 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Carousel from '@/components/Carousel';
+import { Button } from '@/components/ui/button';
 
-const guardianItems = [
+const coloringPages = [
   {
-    title: '🦎 Lizards: The Silent Hunters',
-    imageSrc: '/lizard-guardian.webp',
-    imageAlt: 'Lizard guardian hunting insects',
-    description:
-      'Lizards are excellent at crawling into small spaces where pests hide. They use their quick tongues and sharp eyesight to snatch bugs from leaves and soil.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Bear Digging in the Garden',
+    imageSrc: '/bear-digging-in-garden-coloring-page.png',
+    imageAlt: 'Bear digging up soil in a garden coloring page',
   },
   {
-    title: '🐸 Frogs and Toads: Nighttime Defenders',
-    imageSrc: '/frog-guardian.webp',
-    imageAlt: 'Frog guardian catching insects',
-    description:
-      'Frogs and toads are most active at night, making them perfect for catching pests that come out after dark. They love damp areas and can be invited into your garden with small water features.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Chicken Hoeing in the Garden',
+    imageSrc: '/chicken-hoeing-in-garden-coloring-page.png',
+    imageAlt: 'Chicken using a hoe in a garden coloring page',
   },
   {
-    title: '🐦 Birds: Feathered Protectors',
-    imageSrc: '/bird-guardian.webp',
-    imageAlt: 'Bird guardian eating pests',
-    description:
-      'Birds are constantly on the lookout for snacks. You can attract them by planting native shrubs, offering birdhouses, and keeping feeders nearby.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Cow Harvesting in the Garden',
+    imageSrc: '/cow-harvesting-in-garden-coloring-page.png',
+    imageAlt: 'Cow harvesting vegetables in a garden coloring page',
   },
   {
-    title: '🙏 Praying Mantises: The Patient Predators',
-    imageSrc: '/mantis-guardian.webp',
-    imageAlt: 'Praying mantis hunting',
-    description:
-      'Praying mantises are incredible hunters that wait motionless for their prey before striking with lightning speed. They are especially good at catching flying insects and large pests.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Deer Planting in the Garden',
+    imageSrc: '/deer-planting-in-garden-coloring-page.png',
+    imageAlt: 'Deer planting seeds in a garden coloring page',
   },
   {
-    title: '🕸️ Spiders: Web Weavers of Protection',
-    imageSrc: '/spider-guardian.webp',
-    imageAlt: 'Spider with its web',
-    description:
-      'Spiders may seem scary, but they are among the best natural pest controllers. Their webs trap flying insects, and ground spiders hunt bugs crawling through your plants.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Goat Watering in the Garden',
+    imageSrc: '/goat-watering-in-garden-coloring-page.png',
+    imageAlt: 'Goat watering plants in a garden coloring page',
   },
   {
-    title: '🐞 Ladybugs: Tiny Heroes',
-    imageSrc: '/ladybug-guardian.webp',
-    imageAlt: 'Ladybug eating aphids',
-    description:
-      'Ladybugs and their larvae are voracious eaters of tiny pests that suck sap from your plants. They are especially helpful in vegetable gardens.',
-    bgColorClass: 'bg-white/80 dark:bg-amber-800/60',
-    textColorClass: 'text-amber-700 dark:text-amber-300',
-    headingColorClass: 'text-amber-800 dark:text-amber-200',
+    title: 'Guinea Pig Farm Stand',
+    imageSrc: '/guinea-pig-farm-coloring-page.png',
+    imageAlt: 'Guinea pig farm stand coloring page',
+  },
+  {
+    title: 'Guinea Pigs Selling Cold Brew',
+    imageSrc: '/guinea-pigs-selling-cold-brew-and-plants-coloring-page.png',
+    imageAlt: 'Guinea pigs selling cold brew and plants coloring page',
+  },
+  {
+    title: 'Horse Weeding in the Garden',
+    imageSrc: '/horse-weeding-in-garden-coloring-page.png',
+    imageAlt: 'Horse weeding a garden coloring page',
+  },
+  {
+    title: 'Plant Starters for Sale',
+    imageSrc: '/plant-starters-for-sale-coloring-page.png',
+    imageAlt: 'Plant starters for sale coloring page',
   },
 ];
 
-export default function GardenGuardians() {
+export default function ColoringPages() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative bg-gradient-to-b from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-800">
-      {/* Home icon link in top right corner */}
+    <div className="relative grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 bg-gradient-to-b from-orange-50 via-amber-50 to-amber-100 p-8 pb-20 sm:p-20 dark:from-amber-900 dark:via-amber-900/60 dark:to-amber-800">
       <Link
         href="/"
-        className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-amber-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-amber-700 transition-colors"
+        className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/80 text-2xl shadow-md transition-colors hover:bg-white sm:right-8 sm:top-8 dark:border-white/20 dark:bg-amber-800/80 dark:hover:bg-amber-700"
         aria-label="Go back to home page"
       >
         🏠
       </Link>
 
-      <main className="flex flex-col gap-[32px] row-start-2 items-center max-w-4xl">
-        <h1 className="text-3xl md:text-4xl font-bold flex items-center gap-3 text-amber-800 dark:text-amber-200">
-          <span>⚔️</span> Garden Guardians: Nature's Pest Control{' '}
-          <span>⚔️</span>
-        </h1>
-        <Image
-          className="rounded-lg shadow-md"
-          src="/garden-guardians.webp"
-          alt="Garden Guardians"
-          width={600}
-          height={400}
-          priority
-        />
-        <p className="mt-4 text-lg text-center text-amber-700 dark:text-amber-300">
-          Welcome to our Garden Guardians page! Here you will discover the
-          fascinating creatures that help protect your garden by eating the bugs
-          and pests that can harm your plants. Encouraging these natural allies
-          into your garden means healthier plants, fewer chemicals, and a more
-          vibrant ecosystem.
-        </p>
-
-        {/* Carousel Component */}
-        <Carousel items={guardianItems} />
-
-        <div className="bg-white/90 dark:bg-amber-900/60 p-5 rounded-lg border-t-2 border-amber-300 dark:border-amber-700 w-full">
-          <p className="text-center text-amber-700 dark:text-amber-300 text-lg">
-            By welcoming these amazing creatures into your garden, you create a
-            healthy, balanced environment that thrives naturally. Let your kids
-            explore and observe these Garden Guardians as they keep your garden
-            safe and beautiful!
+      <main className="row-start-2 flex w-full max-w-6xl flex-col gap-12">
+        <section className="mx-auto max-w-3xl text-center">
+          <h1 className="flex items-center justify-center gap-3 text-3xl font-bold text-amber-900 md:text-4xl dark:text-amber-100">
+            <span>🎨</span>
+            Garden Friends Coloring Pages
+            <span>🖍️</span>
+          </h1>
+          <p className="mt-4 text-lg text-amber-700 dark:text-amber-200">
+            Print or download any of the pages below and start coloring! Each
+            page is a high-resolution PNG ready for home printers or digital
+            coloring apps.
           </p>
-        </div>
+        </section>
+
+        <section className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {coloringPages.map((page) => (
+            <article
+              key={page.imageSrc}
+              className="flex h-full flex-col overflow-hidden rounded-2xl border border-amber-200/70 bg-white/90 shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-amber-700/40 dark:bg-amber-900/60"
+            >
+              <div className="relative bg-amber-50/60 dark:bg-amber-950/40">
+                <div className="relative aspect-[8.5/11] w-full">
+                  <Image
+                    src={page.imageSrc}
+                    alt={page.imageAlt}
+                    fill
+                    className="object-contain p-6"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-1 flex-col gap-4 p-6">
+                <h2 className="text-xl font-semibold text-amber-900 dark:text-amber-100">
+                  {page.title}
+                </h2>
+                <Button asChild className="mt-auto w-full">
+                  <a href={page.imageSrc} download>
+                    Download PNG
+                  </a>
+                </Button>
+              </div>
+            </article>
+          ))}
+        </section>
       </main>
     </div>
   );
