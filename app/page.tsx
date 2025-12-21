@@ -46,6 +46,12 @@ export default function Home() {
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/pollinator-path"
+        >
+          🐝 Pollinator Path (Maze) 🌸
+        </Link>
+        <Link
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/memory-match"
         >
           🐹 Garden Memory Match 🥬
