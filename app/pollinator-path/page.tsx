@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TopRightNav from "@/components/TopRightNav";
 
 type LevelDefinition = {
   name: string;
@@ -198,13 +198,7 @@ export default function PollinatorPath() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-green-50 to-emerald-100 text-emerald-900 dark:from-emerald-950 dark:via-emerald-900 dark:to-emerald-800 dark:text-emerald-50">
       <main className="mx-auto flex min-h-screen max-w-5xl flex-col gap-6 px-6 py-12">
-        <Link
-          href="/"
-          className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-green-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-green-700 transition-colors"
-          aria-label="Go back to home page"
-        >
-          🏠
-        </Link>
+        <TopRightNav />
 
         <header className="rounded-3xl bg-white/80 p-8 shadow-xl backdrop-blur dark:bg-emerald-900/70">
           <div className="flex flex-col gap-4">

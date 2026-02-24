@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import TopRightNav from '@/components/TopRightNav';
 import { Button } from '@/components/ui/button';
 
 const coloringPages = [
@@ -53,13 +53,7 @@ const coloringPages = [
 export default function ColoringPages() {
   return (
     <div className="relative grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 bg-gradient-to-b from-orange-50 via-amber-50 to-amber-100 p-8 pb-20 sm:p-20 dark:from-amber-900 dark:via-amber-900/60 dark:to-amber-800">
-      <Link
-        href="/"
-        className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/80 text-2xl shadow-md transition-colors hover:bg-white sm:right-8 sm:top-8 dark:border-white/20 dark:bg-amber-800/80 dark:hover:bg-amber-700"
-        aria-label="Go back to home page"
-      >
-        🏠
-      </Link>
+      <TopRightNav buttonClassName="dark:bg-amber-800/80 dark:hover:bg-amber-700" />
 
       <main className="row-start-2 flex w-full max-w-6xl flex-col gap-12">
         <section className="mx-auto max-w-3xl text-center">

@@ -2,7 +2,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import TopRightNav from "@/components/TopRightNav";
 
 type Cell = "T" | "L" | null; // Tomato or Lettuce
 
@@ -158,14 +158,7 @@ export default function GardenTicTacToePage() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-4 sm:p-20 gap-8 sm:gap-16 relative bg-gradient-to-b from-green-50 to-green-100 dark:from-green-900 dark:to-green-800">
-      {/* Home icon link in top right corner (consistent with other pages) */}
-      <Link
-        href="/"
-        className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-green-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-green-700 transition-colors"
-        aria-label="Go back to home page"
-      >
-        🏠
-      </Link>
+      <TopRightNav />
 
       <main className="flex flex-col gap-3 sm:gap-4 row-start-2 items-center justify-center w-full max-w-xl min-h-[calc(100svh-6rem)]">
         <h1 className="text-2xl md:text-4xl font-bold text-green-700 dark:text-green-200">

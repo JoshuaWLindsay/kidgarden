@@ -2,7 +2,7 @@
 
 import type { KeyboardEvent } from 'react';
 import { useState } from 'react';
-import Link from 'next/link';
+import TopRightNav from '@/components/TopRightNav';
 
 type CircleRegion = {
   color: string;
@@ -104,14 +104,7 @@ export default function SimpleColoringGame() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 text-green-900 dark:from-green-900 dark:to-green-800 dark:text-green-100">
       <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-6 px-6 py-12">
-        {/* Home icon link in top right corner (consistent with other pages) */}
-        <Link
-          href="/"
-          className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-green-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-green-700 transition-colors"
-          aria-label="Go back to home page"
-        >
-          🏠
-        </Link>
+        <TopRightNav />
 
         <div className="rounded-2xl bg-white/80 p-8 shadow-lg backdrop-blur dark:bg-green-800/80">
           <h1 className="text-center text-4xl font-bold text-green-700 dark:text-green-100">

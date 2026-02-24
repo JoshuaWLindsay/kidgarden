@@ -2,7 +2,7 @@
 /* eslint-disable max-lines-per-function, id-length, no-mixed-operators, max-len, max-statements, indent */
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import TopRightNav from "@/components/TopRightNav";
 
 export default function FrogInvaders() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -254,14 +254,7 @@ export default function FrogInvaders() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative bg-gradient-to-b from-green-50 to-green-100 dark:from-green-900 dark:to-green-800">
-      {/* Home icon link in top right corner (consistent with other pages) */}
-      <Link
-        href="/"
-        className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-green-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-green-700 transition-colors"
-        aria-label="Go back to home page"
-      >
-        🏠
-      </Link>
+      <TopRightNav />
 
       <main className="flex flex-col gap-[16px] row-start-2 items-center w-full max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-bold text-green-700 dark:text-green-200">

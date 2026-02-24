@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import TopRightNav from '@/components/TopRightNav';
 import Carousel from '@/components/Carousel';
 
 const habitatItems = [
@@ -108,14 +108,7 @@ export default function GardenHabitats() {
   return (
     <>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative">
-        {/* Home icon link in top right corner */}
-        <Link
-          href="/"
-          className="absolute top-4 right-4 sm:top-8 sm:right-8 rounded-full bg-white/80 dark:bg-green-800/80 border border-black/10 dark:border-white/20 w-12 h-12 flex items-center justify-center text-2xl shadow-md hover:bg-white dark:hover:bg-green-700 transition-colors"
-          aria-label="Go back to home page"
-        >
-          🏠
-        </Link>
+        <TopRightNav />
 
         <main className="flex flex-col gap-[32px] row-start-2 items-center">
           <h1 className="text-3xl font-bold">Garden Habitats</h1>
