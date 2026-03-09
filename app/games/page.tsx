@@ -8,6 +8,7 @@ const gameLinks = [
   { href: '/memory-match', label: '🐹 Garden Memory Match' },
   { href: '/tic-tac-toe', label: '🍅 Garden Tic-Tac-Toe' },
   { href: '/hawk-garden', label: '🦅 Hawk Garden' },
+  { href: '/shark-frenzy', label: '🦈 Shark Frenzy' },
 ];
 
 export default function GamesPage() {
