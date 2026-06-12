@@ -86,7 +86,7 @@ export default function Carousel({
           >
             <div className="p-6 pb-3">
               <h2
-                className={`text-2xl font-semibold mb-2 text-center ${
+                className={`flex min-h-16 items-center justify-center text-2xl font-semibold mb-2 text-center ${
                   currentItem.headingColorClass || ''
                 }`}
               >
@@ -105,7 +105,7 @@ export default function Carousel({
             </div>
             <div className="p-6">
               <p
-                className={`text-center ${
+                className={`min-h-20 text-center ${
                   currentItem.textColorClass || 'text-muted-foreground'
                 }`}
               >

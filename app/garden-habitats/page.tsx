@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import TopRightNav from '@/components/TopRightNav';
 import Carousel from '@/components/Carousel';
 
@@ -106,20 +105,22 @@ const habitatItems = [
 
 export default function GardenHabitats() {
   return (
-    <>
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative">
-        <TopRightNav />
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative bg-gradient-to-b from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-800">
+      <TopRightNav />
 
-        <main className="flex flex-col gap-[32px] row-start-2 items-center">
-          <h1 className="text-3xl font-bold">Garden Habitats</h1>
-          <p className="text-lg">
-            🌱 Discover the wonderful homes for wildlife in our gardens! 🐞
-          </p>
+      <main className="flex flex-col gap-[32px] row-start-2 items-center max-w-4xl">
+        <h1 className="text-3xl md:text-4xl font-bold flex items-center gap-3 text-green-800 dark:text-green-200">
+          <span>🏡</span> Garden Habitats <span>🐞</span>
+        </h1>
+        <p className="mt-4 text-lg text-center text-green-700 dark:text-green-300">
+          🌱 Discover the wonderful homes for wildlife in our gardens! Every
+          pond, woodpile, and patch of tall grass is a cozy home for creatures
+          big and small. 🐞
+        </p>
 
-          {/* Carousel Component */}
-          <Carousel items={habitatItems} autoSlide={true} />
-        </main>
-      </div>
-    </>
+        {/* Carousel Component */}
+        <Carousel items={habitatItems} autoSlide={true} />
+      </main>
+    </div>
   );
 }
