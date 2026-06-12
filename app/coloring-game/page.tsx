@@ -155,7 +155,6 @@ export default function SimpleColoringGame() {
                 <rect fill="#ecfccb" height="360" rx="24" width="320" />
                 {regions.map((region) => {
                   const commonProps = {
-                    key: region.id,
                     fill: region.color,
                     onClick: () => paintRegion(region.id),
                     onKeyDown: (event: KeyboardEvent<SVGElement>) =>
@@ -171,21 +170,21 @@ export default function SimpleColoringGame() {
 
                   if (region.kind === 'circle') {
                     const { cx, cy, r } = region;
-                    return <circle {...commonProps} cx={cx} cy={cy} r={r} />;
+                    return <circle key={region.id} {...commonProps} cx={cx} cy={cy} r={r} />;
                   }
 
                   if (region.kind === 'ellipse') {
                     const { cx, cy, rx, ry } = region;
-                    return <ellipse {...commonProps} cx={cx} cy={cy} rx={rx} ry={ry} />;
+                    return <ellipse key={region.id} {...commonProps} cx={cx} cy={cy} rx={rx} ry={ry} />;
                   }
 
                   if (region.kind === 'rect') {
                     const { x, y, width, height, rx, ry } = region;
-                    return <rect {...commonProps} height={height} rx={rx} ry={ry} width={width} x={x} y={y} />;
+                    return <rect key={region.id} {...commonProps} height={height} rx={rx} ry={ry} width={width} x={x} y={y} />;
                   }
 
                   const { d } = region;
-                  return <path {...commonProps} d={d} />;
+                  return <path key={region.id} {...commonProps} d={d} />;
                 })}
               </svg>
             </div>

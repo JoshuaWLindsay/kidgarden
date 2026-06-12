@@ -35,7 +35,7 @@ export default function GuineaPigGarden() {
                 height={350}
               />
               <p className="mt-4 text-center text-green-700 dark:text-green-200">
-                Our guinea pigs love to munch on fresh parsley! It's rich in
+                Our guinea pigs love to munch on fresh parsley! It&apos;s rich in
                 vitamin C, which is essential for guinea pigs.
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function GuineaPigGarden() {
                 />
                 <p className="mt-3 text-center text-amber-700 dark:text-amber-200">
                   Our guinea pigs love to munch on fresh dandelion leaves!
-                  They're rich in vitamins A and K, which are beneficial for
+                  They&apos;re rich in vitamins A and K, which are beneficial for
                   guinea pigs.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function GuineaPigGarden() {
                 />
                 <p className="mt-3 text-center text-rose-700 dark:text-rose-200">
                   Our guinea pigs love to feast on colorful bell peppers!
-                  They're packed with vitamin C, which is essential for guinea
+                  They&apos;re packed with vitamin C, which is essential for guinea
                   pigs.
                 </p>
               </div>
