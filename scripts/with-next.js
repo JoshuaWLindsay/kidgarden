@@ -26,10 +26,14 @@ if (!task) {
 function resolveSwcPackage() {
   const platform = process.platform;
   const arch = process.arch;
-  const supportedPlatforms = new Set(['darwin', 'linux', 'win32']);
   const supportedArch = new Set(['x64', 'arm64', 'arm']);
 
-  if (!supportedPlatforms.has(platform) || !supportedArch.has(arch)) {
+  // Only darwin uses the bare `@next/swc-<platform>-<arch>` name. linux and
+  // win32 packages carry an ABI/libc suffix (e.g. -gnu, -musl, -msvc) that we
+  // can't reliably reconstruct here, so we skip the auto-install probe and let
+  // npm's optional-dependency resolution (lockfile + .npmrc include=optional)
+  // provide the right binary, with `next` reporting any genuine problem.
+  if (platform !== 'darwin' || !supportedArch.has(arch)) {
     return null;
   }
 
@@ -62,22 +66,25 @@ function ensureSwcBinary() {
     // Install below.
   }
 
+  // Everything below is best-effort: if we can't auto-install the SWC binary
+  // we fall through and let `next` run, since the binary may already be
+  // present under a name we don't probe, and `next` reports real failures.
   let nextPkg;
   try {
     nextPkg = requireFromRoot('next/package.json');
-  } catch (err) {
-    console.error('[with-next] Could not read next/package.json.');
-    process.exit(1);
+  } catch (_) {
+    console.warn('[with-next] Could not read next/package.json; skipping SWC check.');
+    return;
   }
 
   const swcVersion =
     nextPkg.optionalDependencies && nextPkg.optionalDependencies[swcPkg];
 
   if (!swcVersion) {
-    console.error(
-      `[with-next] ${swcPkg} is missing and no matching optional dependency was found in next@${nextPkg.version}.`
+    console.warn(
+      `[with-next] No matching optional dependency for ${swcPkg} in next@${nextPkg.version}; letting next resolve SWC.`
     );
-    process.exit(1);
+    return;
   }
 
   const pkgSpec = `${swcPkg}@${swcVersion}`;
@@ -87,20 +94,11 @@ function ensureSwcBinary() {
 
   const installResult = runNpmInstall(pkgSpec);
   if (installResult.status !== 0) {
-    console.error('[with-next] Failed to install the required SWC binary.');
-    console.error(
-      '[with-next] Make sure you run npm in the same architecture as node, then run: npm install --include=optional'
+    console.warn('[with-next] Could not install the SWC binary automatically.');
+    console.warn(
+      '[with-next] If the build fails, run: npm install --include=optional'
     );
-    process.exit(installResult.status || 1);
-  }
-
-  try {
-    requireFromRoot.resolve(swcPkg);
-  } catch (_) {
-    console.error(
-      `[with-next] ${swcPkg} is still unavailable after installation.`
-    );
-    process.exit(1);
+    return;
   }
 }
 
